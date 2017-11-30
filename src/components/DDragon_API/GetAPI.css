@@ -12,3 +12,7 @@
 .img-wrapper, .text-wrapper {
 	display: inline-block;
 }
+
+.teamComp_options_list input {
+	margin-left: 5px;
+}
