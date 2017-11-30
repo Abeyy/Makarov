@@ -6,8 +6,8 @@ class GetAPI extends Component {
 	constructor () {
 		super();
 		this.state = {
-			champ_display: 'Fighter'
-
+			champ_display: 'Fighter',
+			clicked: false
 		}
 		this.handleButton.bind(this);
 	}
@@ -39,7 +39,15 @@ class GetAPI extends Component {
 	handleButton(e) {
 
 		this.setState({
-			champ_display: e.target.value
+			champ_display: e.target.value,
+			clicked: true
+		})
+	}
+
+	handleButton2(e) {
+		this.setState({
+			clicked: true,
+			team_comp: e.target.value
 		})
 	}
 
@@ -54,8 +62,8 @@ class GetAPI extends Component {
 		for(const name in jsonData) {
 			champList.push(name);
 		}
-
-		return (
+		if(this.state.clicked) {
+			return (
 			<div>
 			<input type="button" className='btn btn-primary' ref="tag" value="Fighter" onClick={this.handleButton.bind(this)} />
 			<input type="button" className='btn btn-basic' ref="tag" value="Tank" onClick={this.handleButton.bind(this)} />
@@ -94,6 +102,19 @@ class GetAPI extends Component {
  			</div>
  			</div>
 		)
+		}
+		else {
+			return (
+				<div>
+					<h1> Select Your Team Comp: </h1>
+					<input type="button" className="btn btn-primary" value="Split Push" onClick={this.handleButton2.bind(this)} />
+					<input type="button" className="btn btn-primary" value="Seige" onClick={this.handleButton2.bind(this)} />
+					<input type="button" className="btn btn-primary" value="Poke" onClick={this.handleButton2.bind(this)} />
+					<input type="button" className="btn btn-primary" value="Team Fight" onClick={this.handleButton2.bind(this)} />
+				</div>
+			)
+		}
+		
 	}
 }
 
