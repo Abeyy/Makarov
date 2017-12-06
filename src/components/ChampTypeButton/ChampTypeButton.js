@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './ChampTypeButton.css';
 
 class ChampTypeButton extends Component {
 	constructor(){
@@ -55,7 +56,7 @@ class ChampTypeButton extends Component {
 	render () {
 		return (
 
-			<button value={this.props.children} className={this.state.btnClass} > {this.props.children} </button>
+			<button value={this.props.children} className={"ChampTypeButton " + this.state.btnClass} > {this.props.children} </button>
 		)
 	}
 }
