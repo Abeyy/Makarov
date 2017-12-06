@@ -22,7 +22,7 @@ class ChampList extends Component {
 		return (
 		<div>
 			<div>
-				<div onClick={this.handleButton.bind(this)}><ChampTypeButton value={this.state.champSel}>Fighter</ChampTypeButton> </div>
+				<ChampTypeButton onClick={this.handleButton.bind(this)}>Fighter</ChampTypeButton>
 		    	<ChampTypeButton onClick={this.handleButton.bind(this)}>Tank</ChampTypeButton>
 		    	<ChampTypeButton onClick={this.handleButton.bind(this)}>Assassin</ChampTypeButton>
 		    	<ChampTypeButton onClick={this.handleButton.bind(this)}>Mage</ChampTypeButton>

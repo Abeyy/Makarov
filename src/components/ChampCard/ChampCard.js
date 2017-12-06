@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import './ChampCard.css';
 
 class ChampCard extends Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state = {
-			champ_display: 'Fighter',
+			champ_display: '',
 			clicked: false,
 			team_comp: 'Browse'
 		}
@@ -32,12 +32,13 @@ class ChampCard extends Component {
 				requestFailed: true
 			})
 		})
-		.then(
-			this.setState({
-				champ_display: this.props.champSel
-			})
-		)
 		
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			champ_display: nextProps.champSel
+		})
 	}
 
 	render() {

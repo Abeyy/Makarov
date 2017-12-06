@@ -64,7 +64,7 @@ class ChampTypeButton extends Component {
 	render () {
 		return (
 
-			<button onClick={this.handleButton.bind(this)} value={this.props.children} className={"ChampTypeButton " + this.state.btnClass} > {this.props.children} </button>
+			<button onClick={this.props.onClick} value={this.props.children} className={"ChampTypeButton " + this.state.btnClass} > {this.props.children} </button>
 		)
 	}
 }
