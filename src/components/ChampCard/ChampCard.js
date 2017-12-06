@@ -60,10 +60,8 @@ class ChampCard extends Component {
 
 				if (jsonData[value].tags[0] == champ_display || (jsonData[value].tags[1] != undefined && jsonData[value].tags[1] == champ_display)) {
 					return(
-						<div>
-						<div className='col-md-1'>
-						</div>
-						<div className="col-md-5 champion_box">
+						<div className="champList_Item">
+						<div className= "champion_box">
 							<h1>{value}</h1>
 							<div className="img-wrapper">
 								<img src={"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/" + jsonData[value].image.full} />

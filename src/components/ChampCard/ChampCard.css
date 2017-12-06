@@ -1,8 +1,17 @@
 .component{}
 
+.champList_Item{
+	width:50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 20px;
+
+}
+
 .champion_box {
 	border: 1px solid #666666;
 	height: 200px;
+	display: block;
 }
 
 .champion_box h1 {
