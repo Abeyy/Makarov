@@ -5,7 +5,8 @@ class ChampTypeButton extends Component {
 	constructor(){
 		super();
 		this.state = {
-			btnClass: 'btn btn-primary'
+			btnClass: 'btn btn-primary',
+			champSel: 'Marksman'
 		}
 	}
 
@@ -52,11 +53,18 @@ class ChampTypeButton extends Component {
 				})
 		}
 	}
+	
+	handleButton(e) {
+		console.log('its happening' + this.props.children)
+		this.setState({
+			champSel: this.props.children
+		})
+	}
 
 	render () {
 		return (
 
-			<button value={this.props.children} className={"ChampTypeButton " + this.state.btnClass} > {this.props.children} </button>
+			<button onClick={this.handleButton.bind(this)} value={this.props.children} className={"ChampTypeButton " + this.state.btnClass} > {this.props.children} </button>
 		)
 	}
 }
