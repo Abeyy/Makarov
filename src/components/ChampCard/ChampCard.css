@@ -1,0 +1,18 @@
+.component{}
+
+.champion_box {
+	border: 1px solid #666666;
+	height: 200px;
+}
+
+.champion_box h1 {
+	text-align: left;
+}
+
+.img-wrapper, .text-wrapper {
+	display: inline-block;
+}
+
+.teamComp_options_list input {
+	margin-left: 5px;
+}
