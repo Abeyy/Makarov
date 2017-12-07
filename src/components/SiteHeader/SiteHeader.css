@@ -1,0 +1,13 @@
+.navbar-default {
+	background-color: #8FFF5F !important;
+}
+
+.navbar a {
+	font-size: 18px;
+	color: white;
+}
+
+a.navbar-brand {
+	font-size: 24px;
+
+}
